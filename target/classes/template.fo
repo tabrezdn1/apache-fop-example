@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="simple">
+            <fo:region-body margin="1in"/>
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+    <fo:page-sequence master-reference="simple">
+        <fo:flow flow-name="xsl-region-body">
+            <fo:block font-size="24pt" font-weight="bold" text-align="center">
+                <xsl:value-of select="document/title"/>
+            </fo:block>
+            <fo:block font-size="18pt" space-after="20pt">
+                <xsl:value-of select="document/section/heading"/>
+            </fo:block>
+            <fo:block font-size="14pt">
+                <xsl:value-of select="document/section/content"/>
+            </fo:block>
+            <fo:block text-align="center">
+                <fo:external-graphic src="{document/image/@url}" content-width="scale-to-fit" height="auto" width="50%"/>
+            </fo:block>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>

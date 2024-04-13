@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <title>Sample PDF Generation</title>
+    <section>
+        <heading>Welcome to Apache FOP</heading>
+        <content>Welcome to this demonstration of PDF generation using Apache FOP with XML and XSL-FO. This example includes formatted text and an image.</content>
+    </section>
+    <image url="https://example.com/path/to/image.jpg"/>
+</document>
